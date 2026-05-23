@@ -1,0 +1,11 @@
+## Task Management
+
+This project uses `tkr` for task management. Tickets are stored as Markdown files
+in `.tkr/tickets/`.
+
+- Get next task: `tkr next --plain`
+- Show task: `tkr show <id> --plain`
+- Claim task: `tkr claim <id>`
+- Complete task: `tkr done <id>`
+- List tasks: `tkr list --plain`
+- Always reference ticket IDs in commits: `feat({{.Prefix}}-N): description`

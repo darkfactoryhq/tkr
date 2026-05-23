@@ -1,0 +1,27 @@
+# TKR - Project Task Management
+
+## Instructions
+
+You are working with the tkr task management system. Tickets are stored as
+Markdown files with YAML frontmatter in `.tkr/tickets/`.
+
+**Workflow:**
+1. Run `tkr next --plain` to get your next assigned task
+2. Run `tkr claim <id>` to mark it as in-progress
+3. Complete the work described in the ticket
+4. Run `tkr done <id>` when finished
+
+**Rules:**
+- NEVER create tasks with `TaskCreate` -- use `tkr new` instead
+- ALWAYS check `tkr next --plain` before starting work
+- ALWAYS include the ticket ID in your commit messages: `feat({{.Prefix}}-N): description`
+- Read the full ticket with `tkr show <id> --plain` before starting work
+- Verify acceptance criteria with the ticket before marking done
+
+**Commands:**
+- `tkr next --plain` -- Get the next available task
+- `tkr show <id> --plain` -- Show full task details
+- `tkr claim <id>` -- Start working on a task
+- `tkr done <id>` -- Mark a task as complete
+- `tkr list --plain` -- List all tasks
+- `tkr lint` -- Validate all tickets
