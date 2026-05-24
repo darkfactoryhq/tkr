@@ -1,5 +1,11 @@
 # Binary
-tkr
+/tkr
 
 # OS
 .DS_Store
+
+# Artifacts
+compass_artifact_*
+
+# GoReleaser
+dist/

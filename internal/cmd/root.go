@@ -12,7 +12,17 @@ var (
 	flagPlain   bool
 	flagJSON    bool
 	flagNoColor bool
+
+	buildVersion = "dev"
+	buildCommit  = "none"
+	buildDate    = "unknown"
 )
+
+func SetVersion(version, commit, date string) {
+	buildVersion = version
+	buildCommit = commit
+	buildDate = date
+}
 
 func formatter() output.Formatter {
 	return output.New(output.DetectMode(flagPlain, flagJSON))
@@ -47,6 +57,7 @@ func init() {
 	rootCmd.AddCommand(txtCmd)
 	rootCmd.AddCommand(syncCmd)
 	rootCmd.AddCommand(deleteCmd)
+	rootCmd.AddCommand(versionCmd)
 }
 
 func Execute() error {
