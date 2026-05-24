@@ -195,8 +195,12 @@ func TestIntegration_ParentChild(t *testing.T) {
 		ID: childID, Title: "Subtask", Status: ticket.StatusTodo, Priority: ticket.PriorityMedium,
 		ParentID: parentID,
 	}
-	s.Save(parent)
-	s.Save(child)
+	if err := s.Save(parent); err != nil {
+		t.Fatalf("save parent: %v", err)
+	}
+	if err := s.Save(child); err != nil {
+		t.Fatalf("save child: %v", err)
+	}
 
 	tickets, _ := s.Load()
 	var children []ticket.Ticket
@@ -357,7 +361,9 @@ func TestIntegration_TicketRoundTrip(t *testing.T) {
 		AcceptanceCriteria: []string{"Tests pass", "No regressions"},
 		Body:               "## Details\n\nThis needs careful handling.",
 	}
-	s.Save(original)
+	if err := s.Save(original); err != nil {
+		t.Fatalf("save original: %v", err)
+	}
 
 	loaded, err := s.Get(id)
 	if err != nil {

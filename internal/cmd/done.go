@@ -46,7 +46,7 @@ func runDone(cmd *cobra.Command, args []string) error {
 				}
 			}
 			if len(incompleteChildren) > 0 {
-				fmt.Fprintf(cmd.ErrOrStderr(), "WARNING: ticket %s has incomplete children: %s\n", t.ID, strings.Join(incompleteChildren, ", "))
+				_, _ = fmt.Fprintf(cmd.ErrOrStderr(), "WARNING: ticket %s has incomplete children: %s\n", t.ID, strings.Join(incompleteChildren, ", "))
 			}
 		}
 	}

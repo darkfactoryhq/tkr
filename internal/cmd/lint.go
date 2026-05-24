@@ -30,7 +30,7 @@ func runLint(cmd *cobra.Command, args []string) error {
 	for _, t := range tickets {
 		errs := ticket.Validate(&t)
 		for _, e := range errs {
-			fmt.Fprintf(cmd.ErrOrStderr(), "%s: %s: %s\n", t.ID, e.Field, e.Message)
+			_, _ = fmt.Fprintf(cmd.ErrOrStderr(), "%s: %s: %s\n", t.ID, e.Field, e.Message)
 			hasErrors = true
 		}
 	}
@@ -43,7 +43,7 @@ func runLint(cmd *cobra.Command, args []string) error {
 	g := dag.BuildFromTickets(tickets)
 	cr := dag.DetectCycles(g)
 	if cr.HasCycle {
-		fmt.Fprintf(cmd.ErrOrStderr(), "dependency cycle detected involving: %v\n", cr.CycleNodes)
+		_, _ = fmt.Fprintf(cmd.ErrOrStderr(), "dependency cycle detected involving: %v\n", cr.CycleNodes)
 		hasErrors = true
 	}
 

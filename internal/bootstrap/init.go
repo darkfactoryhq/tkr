@@ -109,7 +109,7 @@ func writeTemplate(dest, tmplPath string, data templateData) error {
 	if err != nil {
 		return err
 	}
-	defer f.Close()
+	defer func() { _ = f.Close() }()
 	if err := t.Execute(f, data); err != nil {
 		return err
 	}
