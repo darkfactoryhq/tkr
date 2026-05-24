@@ -33,7 +33,7 @@ func runDelete(cmd *cobra.Command, args []string) error {
 	if !force {
 		fmt.Fprintf(os.Stderr, "Delete %s (%s)? [y/N] ", t.ID, t.Title)
 		var answer string
-		fmt.Scanln(&answer)
+		_, _ = fmt.Scanln(&answer)
 		if answer != "y" && answer != "Y" {
 			return fmt.Errorf("aborted")
 		}

@@ -130,7 +130,9 @@ func TestIntegration_ListAndFilter(t *testing.T) {
 
 	tk, _ := s.Get("TEST-2")
 	tk.Status = ticket.StatusInProgress
-	s.Save(tk)
+	if err := s.Save(tk); err != nil {
+		t.Fatalf("save: %v", err)
+	}
 
 	tickets, err := s.Load()
 	if err != nil {
@@ -166,8 +168,12 @@ func TestIntegration_Dependencies(t *testing.T) {
 		ID: id2, Title: "Add API", Status: ticket.StatusTodo, Priority: ticket.PriorityHigh,
 		Dependencies: []string{id1},
 	}
-	s.Save(t1)
-	s.Save(t2)
+	if err := s.Save(t1); err != nil {
+		t.Fatalf("save t1: %v", err)
+	}
+	if err := s.Save(t2); err != nil {
+		t.Fatalf("save t2: %v", err)
+	}
 
 	got, _ := s.Get(id2)
 	if len(got.Dependencies) != 1 || got.Dependencies[0] != id1 {

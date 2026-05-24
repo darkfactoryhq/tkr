@@ -88,7 +88,7 @@ func runSync(cmd *cobra.Command, args []string) error {
 	}
 
 	if synced == 0 {
-		fmt.Fprintln(cmd.OutOrStdout(), "No tickets with PR links found")
+		_, _ = fmt.Fprintln(cmd.OutOrStdout(), "No tickets with PR links found")
 	}
 	return nil
 }

@@ -15,12 +15,12 @@ func (s *Store) NextID() (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("opening seq file: %w", err)
 	}
-	defer f.Close()
+	defer func() { _ = f.Close() }()
 
 	if err := lockFile(f); err != nil {
 		return "", fmt.Errorf("acquiring lock: %w", err)
 	}
-	defer unlockFile(f)
+	defer func() { _ = unlockFile(f) }()
 
 	data, err := os.ReadFile(seqPath)
 	if err != nil {

@@ -185,7 +185,7 @@ func (s *Store) Save(t *ticket.Ticket) error {
 	}
 
 	if err := os.Rename(tmpPath, finalPath); err != nil {
-		os.Remove(tmpPath)
+		_ = os.Remove(tmpPath)
 		return fmt.Errorf("renaming temp file: %w", err)
 	}
 

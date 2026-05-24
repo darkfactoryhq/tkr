@@ -134,13 +134,13 @@ func (f *humanFormatter) FormatTicketList(tickets []ticket.Ticket) string {
 	var b strings.Builder
 	w := tabwriter.NewWriter(&b, 0, 0, 2, ' ', 0)
 
-	fmt.Fprintf(w, "%s\t%s\t%s\t%s\t%s\t%s\n",
+	_, _ = fmt.Fprintf(w, "%s\t%s\t%s\t%s\t%s\t%s\n",
 		bold("ID"), bold("Title"), bold("Status"), bold("Priority"), bold("Type"), bold("Assignee"))
-	fmt.Fprintf(w, "%s\t%s\t%s\t%s\t%s\t%s\n",
+	_, _ = fmt.Fprintf(w, "%s\t%s\t%s\t%s\t%s\t%s\n",
 		"------", "----------------------------------------", "-----------", "--------", "-------", "--------")
 
 	for _, t := range tickets {
-		fmt.Fprintf(w, "%s\t%s\t%s\t%s\t%s\t%s\n",
+		_, _ = fmt.Fprintf(w, "%s\t%s\t%s\t%s\t%s\t%s\n",
 			cyan(t.ID),
 			truncate(t.Title, 40),
 			statusColor(t.Status),
@@ -150,7 +150,7 @@ func (f *humanFormatter) FormatTicketList(tickets []ticket.Ticket) string {
 		)
 	}
 
-	w.Flush()
+	_ = w.Flush()
 	return b.String()
 }
 

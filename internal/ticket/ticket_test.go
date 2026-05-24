@@ -184,7 +184,7 @@ func TestParseFileMissingFrontmatterDelimiters(t *testing.T) {
 
 	t.Run("missing opening delimiter", func(t *testing.T) {
 		path := filepath.Join(dir, "no-open.md")
-		os.WriteFile(path, []byte("no frontmatter here"), 0o644)
+		_ = os.WriteFile(path, []byte("no frontmatter here"), 0o644)
 		_, err := ParseFile(path)
 		if err == nil {
 			t.Fatal("expected error for missing opening delimiter")
@@ -193,7 +193,7 @@ func TestParseFileMissingFrontmatterDelimiters(t *testing.T) {
 
 	t.Run("missing closing delimiter", func(t *testing.T) {
 		path := filepath.Join(dir, "no-close.md")
-		os.WriteFile(path, []byte("---\nid: TKR-1\ntitle: test\n"), 0o644)
+		_ = os.WriteFile(path, []byte("---\nid: TKR-1\ntitle: test\n"), 0o644)
 		_, err := ParseFile(path)
 		if err == nil {
 			t.Fatal("expected error for missing closing delimiter")
