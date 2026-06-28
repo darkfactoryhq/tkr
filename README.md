@@ -8,6 +8,13 @@
 
 Markdown-native, git-resident project management CLI for AI coding agents.
 
+> [!WARNING]
+> **Status: early and under active development (0.x).**
+> tkr is published and usable, but has not yet reached a stable 1.0. While on
+> 0.x, commands, the ticket schema, and on-disk formats may change between
+> releases — sometimes in breaking ways. Use it at your own discretion, and pin
+> a specific version if you depend on it.
+
 Each ticket is a Markdown file with YAML frontmatter, stored in `.tkr/tickets/` and version-controlled alongside your code. No server, no database, no accounts.
 
 ## Install
