@@ -32,7 +32,7 @@ tkr new -t "Add OAuth2 login" -p high       # create a ticket
 tkr next                                    # get highest-priority unblocked ticket
 tkr claim TKR-1                             # mark in-progress, create feature branch
 tkr done TKR-1                              # mark done
-tkr release v1.0.0                          # generate CHANGELOG from done tickets
+tkr release --tag 1.0.0 --write             # write CHANGELOG.md from done tickets
 ```
 
 ## Commands

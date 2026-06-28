@@ -170,7 +170,7 @@ func (s *Store) Save(t *ticket.Ticket) error {
 		return fmt.Errorf("creating tickets directory: %w", err)
 	}
 
-	t.Updated = time.Now()
+	t.Updated = time.Now().UTC()
 
 	data, err := ticket.Marshal(t)
 	if err != nil {

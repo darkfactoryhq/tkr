@@ -11,6 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-06-29
+
+### Fixed
+- `tkr delete` no longer hangs on its confirmation prompt when stdin is not a
+  terminal (pipes/CI/agents); it now errors and asks for `--force` instead.
+- `updated` timestamps are written in UTC, consistent with `created`.
+- `tkr release` rejects stray positional arguments — use `--tag`. Corrected the
+  README example to `tkr release --tag <version> --write`.
+
 ## [0.1.1] - 2026-06-29
 
 ### Fixed
@@ -25,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Community health files: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`,
   `SECURITY.md`, issue/PR templates, Dependabot config, and `CODEOWNERS`.
 
-[Unreleased]: https://github.com/darkfactoryhq/tkr/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/darkfactoryhq/tkr/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/darkfactoryhq/tkr/releases/tag/v0.1.2
 [0.1.1]: https://github.com/darkfactoryhq/tkr/releases/tag/v0.1.1
 [0.1.0]: https://github.com/darkfactoryhq/tkr/releases/tag/v0.1.0
