@@ -13,6 +13,7 @@ import (
 var releaseCmd = &cobra.Command{
 	Use:   "release",
 	Short: "Generate CHANGELOG section from completed tickets",
+	Args:  cobra.NoArgs,
 	RunE:  runRelease,
 }
 

@@ -31,6 +31,9 @@ func runDelete(cmd *cobra.Command, args []string) error {
 
 	force, _ := cmd.Flags().GetBool("force")
 	if !force {
+		if !stdinIsTerminal() {
+			return fmt.Errorf("refusing to delete %s without --force when input is not a terminal", t.ID)
+		}
 		fmt.Fprintf(os.Stderr, "Delete %s (%s)? [y/N] ", t.ID, t.Title)
 		var answer string
 		_, _ = fmt.Scanln(&answer)
@@ -45,4 +48,15 @@ func runDelete(cmd *cobra.Command, args []string) error {
 
 	fmt.Fprintf(os.Stderr, "Deleted %s\n", t.ID)
 	return nil
+}
+
+// stdinIsTerminal reports whether standard input is an interactive terminal.
+// Used to avoid blocking on a confirmation prompt in non-interactive contexts
+// (pipes, CI, agents), where the caller should pass --force instead.
+func stdinIsTerminal() bool {
+	fi, err := os.Stdin.Stat()
+	if err != nil {
+		return false
+	}
+	return fi.Mode()&os.ModeCharDevice != 0
 }
