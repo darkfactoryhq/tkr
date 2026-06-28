@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/spf13/cobra"
-	"github.com/tkr-cli/tkr/internal/migrate"
-	"github.com/tkr-cli/tkr/internal/ticket"
+	"github.com/darkfactoryhq/tkr/internal/migrate"
+	"github.com/darkfactoryhq/tkr/internal/ticket"
 )
 
 var importCmd = &cobra.Command{

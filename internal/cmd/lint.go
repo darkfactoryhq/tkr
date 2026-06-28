@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"github.com/tkr-cli/tkr/internal/dag"
-	"github.com/tkr-cli/tkr/internal/ticket"
+	"github.com/darkfactoryhq/tkr/internal/dag"
+	"github.com/darkfactoryhq/tkr/internal/ticket"
 )
 
 var lintCmd = &cobra.Command{

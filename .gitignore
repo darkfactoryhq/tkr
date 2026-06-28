@@ -9,3 +9,7 @@ compass_artifact_*
 
 # GoReleaser
 dist/
+
+# IDE / editor
+.idea/
+.vscode/

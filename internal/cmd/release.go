@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/spf13/cobra"
-	"github.com/tkr-cli/tkr/internal/changelog"
-	"github.com/tkr-cli/tkr/internal/ticket"
+	"github.com/darkfactoryhq/tkr/internal/changelog"
+	"github.com/darkfactoryhq/tkr/internal/ticket"
 )
 
 var releaseCmd = &cobra.Command{

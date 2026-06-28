@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/tkr-cli/tkr/internal/ticket"
+	"github.com/darkfactoryhq/tkr/internal/ticket"
 )
 
 func ToMermaid(tickets []ticket.Ticket, g *Graph) string {

@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tkr-cli/tkr/internal/ticket"
+	"github.com/darkfactoryhq/tkr/internal/ticket"
 )
 
 func newTicket(id string, status ticket.Status, priority ticket.Priority, complexity int, deps []string, labels []string) ticket.Ticket {

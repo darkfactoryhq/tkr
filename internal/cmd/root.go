@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"github.com/tkr-cli/tkr/internal/output"
+	"github.com/darkfactoryhq/tkr/internal/output"
 )
 
 var (

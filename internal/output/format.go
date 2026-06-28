@@ -3,7 +3,7 @@ package output
 import (
 	"os"
 
-	"github.com/tkr-cli/tkr/internal/ticket"
+	"github.com/darkfactoryhq/tkr/internal/ticket"
 )
 
 type Mode int

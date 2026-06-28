@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"github.com/tkr-cli/tkr/internal/git"
-	"github.com/tkr-cli/tkr/internal/ticket"
+	"github.com/darkfactoryhq/tkr/internal/git"
+	"github.com/darkfactoryhq/tkr/internal/ticket"
 )
 
 var watchCmd = &cobra.Command{

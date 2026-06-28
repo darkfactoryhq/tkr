@@ -1,4 +1,4 @@
-module github.com/tkr-cli/tkr
+module github.com/darkfactoryhq/tkr
 
 go 1.26.3
 
