@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tkr-cli/tkr/internal/ticket"
+	"github.com/darkfactoryhq/tkr/internal/ticket"
 )
 
 func TestFormatTxtLine_Done(t *testing.T) {

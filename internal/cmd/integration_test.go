@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tkr-cli/tkr/internal/bootstrap"
-	"github.com/tkr-cli/tkr/internal/store"
-	"github.com/tkr-cli/tkr/internal/ticket"
+	"github.com/darkfactoryhq/tkr/internal/bootstrap"
+	"github.com/darkfactoryhq/tkr/internal/store"
+	"github.com/darkfactoryhq/tkr/internal/ticket"
 )
 
 func setupTestProject(t *testing.T) string {

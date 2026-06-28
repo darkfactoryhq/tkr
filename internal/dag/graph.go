@@ -3,7 +3,7 @@ package dag
 import (
 	"sort"
 
-	"github.com/tkr-cli/tkr/internal/ticket"
+	"github.com/darkfactoryhq/tkr/internal/ticket"
 )
 
 // EdgeType describes the relationship between two nodes.

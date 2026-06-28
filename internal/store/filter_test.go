@@ -3,7 +3,7 @@ package store
 import (
 	"testing"
 
-	"github.com/tkr-cli/tkr/internal/ticket"
+	"github.com/darkfactoryhq/tkr/internal/ticket"
 )
 
 func TestParseFilterStatusEq(t *testing.T) {

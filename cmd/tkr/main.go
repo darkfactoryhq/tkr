@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/tkr-cli/tkr/internal/cmd"
+	"github.com/darkfactoryhq/tkr/internal/cmd"
 )
 
 var (

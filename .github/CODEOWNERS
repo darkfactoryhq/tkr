@@ -1,0 +1,5 @@
+# Default owners for everything in the repo.
+# These owners are requested for review on every pull request.
+# Once the darkfactoryhq org has a maintainers team, swap this for
+# @darkfactoryhq/maintainers.
+* @shivamagarwal7

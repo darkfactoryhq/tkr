@@ -6,7 +6,7 @@ import (
 	"text/tabwriter"
 
 	"github.com/fatih/color"
-	"github.com/tkr-cli/tkr/internal/ticket"
+	"github.com/darkfactoryhq/tkr/internal/ticket"
 )
 
 type humanFormatter struct{}

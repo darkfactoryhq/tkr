@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-	"github.com/tkr-cli/tkr/internal/dag"
+	"github.com/darkfactoryhq/tkr/internal/dag"
 )
 
 var graphCmd = &cobra.Command{

@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
-	"github.com/tkr-cli/tkr/internal/bootstrap"
+	"github.com/darkfactoryhq/tkr/internal/bootstrap"
 )
 
 var initCmd = &cobra.Command{

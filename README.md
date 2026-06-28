@@ -1,5 +1,11 @@
 # tkr
 
+[![CI](https://github.com/darkfactoryhq/tkr/actions/workflows/ci.yml/badge.svg)](https://github.com/darkfactoryhq/tkr/actions/workflows/ci.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/darkfactoryhq/tkr.svg)](https://pkg.go.dev/github.com/darkfactoryhq/tkr)
+[![Go Report Card](https://goreportcard.com/badge/github.com/darkfactoryhq/tkr)](https://goreportcard.com/report/github.com/darkfactoryhq/tkr)
+[![Latest release](https://img.shields.io/github/v/release/darkfactoryhq/tkr)](https://github.com/darkfactoryhq/tkr/releases)
+[![License: MIT](https://img.shields.io/github/license/darkfactoryhq/tkr)](LICENSE)
+
 Markdown-native, git-resident project management CLI for AI coding agents.
 
 Each ticket is a Markdown file with YAML frontmatter, stored in `.tkr/tickets/` and version-controlled alongside your code. No server, no database, no accounts.
@@ -7,13 +13,13 @@ Each ticket is a Markdown file with YAML frontmatter, stored in `.tkr/tickets/` 
 ## Install
 
 ```
-go install github.com/tkr-cli/tkr/cmd/tkr@latest
+go install github.com/darkfactoryhq/tkr/cmd/tkr@latest
 ```
 
 Or build from source:
 
 ```
-git clone https://github.com/tkr-cli/tkr.git
+git clone https://github.com/darkfactoryhq/tkr.git
 cd tkr
 make build
 ```
@@ -165,6 +171,17 @@ branch_pattern: "feat/{id}-{slug}"
 #   - Tests written
 ```
 
+## Contributing
+
+Contributions are welcome — bug reports, ideas, docs, and code. See
+[CONTRIBUTING.md](CONTRIBUTING.md) for build, test, and PR conventions, and the
+[Code of Conduct](CODE_OF_CONDUCT.md) for community expectations.
+
+## Security
+
+Found a vulnerability? Please report it privately rather than opening a public
+issue — see [SECURITY.md](SECURITY.md).
+
 ## License
 
-MIT
+[MIT](LICENSE) © tkr contributors

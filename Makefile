@@ -1,5 +1,5 @@
 BINARY := tkr
-PKG := github.com/tkr-cli/tkr/cmd/tkr
+PKG := github.com/darkfactoryhq/tkr/cmd/tkr
 
 .PHONY: build test lint clean install
 

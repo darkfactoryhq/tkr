@@ -36,7 +36,7 @@ changelog:
 
 release:
   github:
-    owner: shivamagarwal7
+    owner: darkfactoryhq
     name: tkr
   draft: false
   prerelease: auto

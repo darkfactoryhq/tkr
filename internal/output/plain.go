@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tkr-cli/tkr/internal/ticket"
+	"github.com/darkfactoryhq/tkr/internal/ticket"
 )
 
 type plainFormatter struct{}
